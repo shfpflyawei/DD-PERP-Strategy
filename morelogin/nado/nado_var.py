@@ -1645,19 +1645,19 @@ def check_and_adjust_hedge(pages, configs, show_details=True):
             print("  无法获取有效的Nado持仓信息，跳过检查")
         return False
     
-    # 如果方向为0，说明Nado当前无持仓，直接跳过对冲逻辑
-    if nado_direction == 0:
-        if show_details:
-            print("  Nado无持仓，暂不处理")
-        return False
-    
     # 计算实际持仓值（带符号）
     # parse_position返回的是绝对值和方向，需要计算实际值
-    nado_actual = nado_value * nado_direction
+    nado_actual = (nado_value * nado_direction) if nado_value is not None and nado_direction != 0 else 0.0
     var_actual = (var_value * var_direction) if var_value is not None and var_direction != 0 else 0.0
     
     # 计算总和：Nado + Var
     total = nado_actual + var_actual
+    
+    # 如果两者都无持仓，无需处理
+    if abs(nado_actual) < TOLERANCE and abs(var_actual) < TOLERANCE:
+        if show_details:
+            print("  两者都无持仓，无需处理")
+        return False
     
     if show_details:
         print(f"  计算: {nado_actual:.6f} + {var_actual:.6f} = {total:.6f}")
