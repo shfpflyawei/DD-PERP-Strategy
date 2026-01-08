@@ -68,6 +68,34 @@ cd DD-strategy-bot-main
 
 ## 📦 安装依赖
 
+### 创建虚拟环境（推荐）
+
+使用虚拟环境可以避免依赖冲突，推荐在安装依赖前先创建虚拟环境。
+
+#### Linux/macOS:
+
+```bash
+# 创建虚拟环境
+python3 -m venv venv
+
+# 激活虚拟环境
+source venv/bin/activate
+```
+
+#### Windows:
+
+```bash
+# 创建虚拟环境
+python -m venv venv
+
+# 激活虚拟环境
+venv\Scripts\activate
+```
+
+激活虚拟环境后，命令行提示符前会显示 `(venv)` 标识。
+
+**退出虚拟环境：** 在任何系统上，只需输入 `deactivate` 即可退出虚拟环境。
+
 ### 基础依赖
 
 ```bash
