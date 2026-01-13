@@ -102,35 +102,6 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### TA-Lib 安装说明
-
-**注意**：TA-Lib 需要先安装系统级依赖，然后才能通过 pip 安装 Python 包。
-
-**Linux (Ubuntu/Debian):**
-```bash
-sudo apt-get update
-sudo apt-get install ta-lib
-pip install TA-Lib
-```
-
-**macOS:**
-```bash
-brew install ta-lib
-pip install TA-Lib
-```
-
-**Windows:**
-```bash
-# 方法1: 下载预编译的 wheel 文件
-# 访问 https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
-# 下载对应 Python 版本的 .whl 文件，然后安装：
-pip install TA_Lib-0.4.28-cp39-cp39-win_amd64.whl
-
-# 方法2: 使用 conda
-conda install -c conda-forge ta-lib
-```
-
-如果遇到安装问题，请参考 [TA-Lib 官方文档](https://ta-lib.org/install/)。
 
 ## 🔗 交易所邀请链接
 
@@ -138,15 +109,11 @@ conda install -c conda-forge ta-lib
 
 ### StandX
 - **返佣比例：** 5%
-- **邀请链接：** https://standx.com/referral?code=Dazmon88
+- **邀请链接：** https://standx.com/referral?code=flyawei
 
 ### GRVT
 - **返佣比例：** 35%
-- **邀请链接：** https://grvt.io/?ref=Dazmon
-
-### VAR
-- **返佣优惠：** 点差全返
-- **邀请链接：** https://omni.variational.io/?ref=OMNINU3G7KVK
+- **邀请链接：** https://grvt.io/?ref=H4WBZQV
 
 ## ⚠️ 风险提示
 
