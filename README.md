@@ -1,4 +1,4 @@
-# DD Strategy Bot
+<img width="411" height="305" alt="image" src="https://github.com/user-attachments/assets/8309aeb3-12aa-409c-8394-881de48e1058" /># DD Strategy Bot
 
 多平台永续合约（Perp）策略系统
 
@@ -81,6 +81,40 @@ python3 -m venv venv
 # 激活虚拟环境
 source venv/bin/activate
 ```
+# 安装依赖
+pip install -r requirements.txt
+```
+#配置参数文件
+
+cd strategys/strategy_standx
+```
+vim config.yaml
+```
+实例👇
+exchange:
+  exchange_name: standx
+  private_key: "你的钱包私钥"
+  chain: bsc
+
+symbol: BTC-USD
+
+grid:
+  upper_price: 200000
+  lower_price: 60000
+  price_step: 10
+  grid_count: 10
+  price_spread: 50
+  order_quantity: 0.0001
+  sleep_interval: 1
+
+risk:
+  enable: true
+  adx_threshold: 25
+  adx_max: 60
+```
+#运行脚本
+python standx_mm.py
+```
 
 #### Windows:
 
@@ -95,14 +129,41 @@ venv\Scripts\activate
 激活虚拟环境后，命令行提示符前会显示 `(venv)` 标识。
 
 **退出虚拟环境：** 在任何系统上，只需输入 `deactivate` 即可退出虚拟环境。
-
-### 基础依赖
-
-```bash
+# 安装依赖
 pip install -r requirements.txt
 ```
+#配置参数文件
 
+cd strategys/strategy_standx
+```
+编辑 config.yaml
+```
+实例👇
+exchange:
+  exchange_name: standx
+  private_key: "你的钱包私钥"
+  chain: bsc
 
+symbol: BTC-USD
+
+grid:
+  upper_price: 200000
+  lower_price: 60000
+  price_step: 10
+  grid_count: 10
+  price_spread: 50
+  order_quantity: 0.0001
+  sleep_interval: 1
+
+risk:
+  enable: true
+  adx_threshold: 25
+  adx_max: 60
+```
+
+#运行脚本
+python standx_mm.py
+```
 ## 🔗 交易所邀请链接
 
 使用以下邀请链接注册，可获得返佣优惠：
