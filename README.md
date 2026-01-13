@@ -79,18 +79,22 @@ cd DD-strategy-bot-main
 python3 -m venv venv
 
 # 激活虚拟环境
+```bash
 source venv/bin/activate
 ```
 # 安装依赖
+```bash
 pip install -r requirements.txt
 ```
 #配置参数文件
-
+```bash
 cd strategys/strategy_standx
 ```
+```bash
 vim config.yaml
 ```
 实例👇
+```bash
 exchange:
   exchange_name: standx
   private_key: "你的钱包私钥"
@@ -113,6 +117,7 @@ risk:
   adx_max: 60
 ```
 #运行脚本
+```bash
 python standx_mm.py
 ```
 
@@ -130,14 +135,17 @@ venv\Scripts\activate
 
 **退出虚拟环境：** 在任何系统上，只需输入 `deactivate` 即可退出虚拟环境。
 # 安装依赖
+```bash
 pip install -r requirements.txt
 ```
 #配置参数文件
-
+```bash
 cd strategys/strategy_standx
 ```
+```bash
 编辑 config.yaml
 ```
+```bash
 实例👇
 exchange:
   exchange_name: standx
@@ -162,6 +170,7 @@ risk:
 ```
 
 #运行脚本
+```bash
 python standx_mm.py
 ```
 ## 🔗 交易所邀请链接
